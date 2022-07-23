@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HotelDetails"
+    android:background="@color/pink2">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_arrow_back"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_viganplaza_detail" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/backButton"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hotelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vigan Plaza Hotel"
+            android:layout_marginTop="170dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:letterSpacing=".1"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/HotelLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vigan, Ilocos Sur"
+            android:layout_below="@id/hotelName"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:letterSpacing=".04"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/rate"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/HotelLocation"
+            android:src="@drawable/ic_rate_star"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:layout_below="@id/HotelLocation"
+            android:layout_toRightOf="@id/rate"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:layout_marginStart="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_below="@id/topLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iconCall"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_callno" />
+
+                <ImageView
+                    android:id="@+id/iconEmail"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/line5"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_email" />
+
+                <ImageView
+                    android:id="@+id/iconWeb"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/line6"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_website" />
+
+                <ImageView
+                    android:id="@+id/iconTime"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/line7"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_time" />
+
+                <TextView
+                    android:id="@+id/PhoneNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/centerLine"
+                    android:text="(077) 722 1527"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/centerLine"
+                    android:text="viganplaza@yahoo.com"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/centerLine"
+                    android:text="viganplazahotel.com"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/centerLine"
+                    android:text="Always Open"
+                    android:textColor="@color/green"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/centerLine"
+                    android:layout_width="2dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/iconCall"
+                    android:background="@color/black" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="250dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/PhoneNo"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/centerLine"
+                    android:background="@color/black" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="250dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/Email"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/centerLine"
+                    android:background="@color/black" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="250dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/Website"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/centerLine"
+                    android:background="@color/black" />
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="250dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/Open"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/centerLine"
+                    android:background="@color/black" />
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/iconCall"
+                    android:layout_marginStart="10dp"
+                    android:layout_toLeftOf="@+id/centerLine"
+                    android:background="@color/black" />
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/iconEmail"
+                    android:layout_marginStart="10dp"
+                    android:layout_toLeftOf="@+id/centerLine"
+                    android:background="@color/black" />
+
+                <View
+                    android:id="@+id/line7"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/iconWeb"
+                    android:layout_marginStart="10dp"
+                    android:layout_toLeftOf="@+id/centerLine"
+                    android:background="@color/black" />
+
+                <View
+                    android:id="@+id/line8"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/iconTime"
+                    android:layout_marginStart="10dp"
+                    android:layout_toLeftOf="@+id/centerLine"
+                    android:background="@color/black" />
+
+                <Button
+                    android:id="@+id/BookNow"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/line4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/create_btn"
+                    android:letterSpacing="0.1"
+                    android:text="BOOK NOW"
+                    android:textColor="@color/pink2" />
+
+                <TextView
+                    android:id="@+id/About"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/BookNow"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:letterSpacing=".05"
+                    android:text="About"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/line9"
+                    android:layout_width="350dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/About"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/room"
+                    android:layout_width="170dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/line9"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/img_about_plaza" />
+
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/line9"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/room"
+                    android:src="@drawable/img_about_plazafood" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

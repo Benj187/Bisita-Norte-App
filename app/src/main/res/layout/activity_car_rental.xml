@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarRental"
+    android:background="@color/pink2">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_arrow_back"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/backButton"
+        android:text="Search Car Rental"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/sethotel"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_below="@id/backButton"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_withDriver"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/creatacc_box"
+            android:text="With Driver"
+            android:textColor="@color/pink2"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_withoutDriver"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/btn_withDriver"
+            android:background="@drawable/creatacc_box"
+            android:text="Without Driver"
+            android:textColor="@color/gray"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/rental_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_withDriver"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:letterSpacing=".03"
+            android:text="Your Rental Location"
+            android:textColor="@color/black" />
+
+        <AutoCompleteTextView
+            android:id="@+id/carRent"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rental_place"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"
+            android:completionHint="Select a Location"
+            android:completionThreshold="1"
+            android:hint="Type Here..."
+            android:paddingLeft="40dp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/rental_place"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/pickUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carRent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Pick-up Date"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/PickupDate"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/pickUp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:paddingLeft="40dp"
+            android:text="Jan-01-2022"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/pickUp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_calendar_rental" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carRent"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/pickUp"
+            android:text="Duration"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/durationInput"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/duration"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/PickupDate"
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/pickUpTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PickupDate"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Pick-up Time"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/PickupTime"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/pickUpTime"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:paddingLeft="40dp"
+            android:text="12:00 AM"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/pickUpTime"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_clock_rental" />
+
+        <Button
+            android:id="@+id/createButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/create_btn"
+            android:letterSpacing="0.1"
+            android:text="SEARCH CAR"
+            android:textColor="@color/pink2" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/most"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sethotel"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Most Searched Car Rental Service"
+        android:textColor="@color/white"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/most"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="350dp"
+        android:layout_height="225dp"
+        android:layout_below="@+id/line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/car1"
+                android:layout_width="240dp"
+                android:layout_height="225dp"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleX="1.3"
+                    android:src="@drawable/img_kotseboy" />
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="KotseBoy Car Rental"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/logo_fb" />
+
+                <TextView
+                    android:id="@+id/fbname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct1"
+                    android:text="KotseBoy Car Rental Service"
+                    android:textColor="#17ABFD"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fbname"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct1"
+                    android:text="+63 917 626 0628"
+                    android:textColor="#17ABFD"
+                    android:textSize="12dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/car2"
+                android:layout_width="240dp"
+                android:layout_height="225dp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/car1"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleY="1.2"
+                    android:src="@drawable/img_safe" />
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="SafeRide.ph"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/logo_fb" />
+
+                <TextView
+                    android:id="@+id/fbname2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct2"
+                    android:text="Saferide Car Rental"
+                    android:textColor="#17ABFD"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fbname2"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct2"
+                    android:text="+63 917 540 0159"
+                    android:textColor="#17ABFD"
+                    android:textSize="12dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/car3"
+                android:layout_width="240dp"
+                android:layout_height="225dp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/car2"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleX="2"
+                    android:src="@drawable/img_marvins_rental" />
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="Marvin's Car Rental"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/title3"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/logo_fb" />
+
+                <TextView
+                    android:id="@+id/fbname3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title3"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct3"
+                    android:text="Marvin's Car Rental Service"
+                    android:textColor="#17ABFD"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fbname3"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct3"
+                    android:text="+63 935 737 1941"
+                    android:textColor="#17ABFD"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/scroll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

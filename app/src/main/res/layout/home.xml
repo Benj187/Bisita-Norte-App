@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink2">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="230dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/logo2"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/activity_menu_bg">
+
+        <ImageButton
+            android:id="@+id/Hotels"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/Spots"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/hotel" />
+
+        <ImageButton
+            android:id="@+id/Spots"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@id/ToDo"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/spots" />
+
+        <ImageButton
+            android:id="@+id/ToDo"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/todo" />
+
+        <ImageButton
+            android:id="@+id/CarRent"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/ToDo"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/car" />
+
+        <ImageButton
+            android:id="@+id/Trips"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/CarRent"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/trips" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@+id/Hotels"
+            android:background="@color/gray" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@id/Spots"
+            android:background="@color/gray" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@id/ToDo"
+            android:background="@color/gray" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@id/CarRent"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@id/menu"
+        android:background="@color/pink3"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/promote"
+                android:layout_width="350dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/activity_menu_bg">
+
+                <TextView
+                    android:id="@+id/prom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".09"
+                    android:text="Promotions"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="310dp"
+                    android:layout_height="130dp"
+                    android:layout_below="@id/prom"
+                    android:layout_centerHorizontal="true"
+                    android:scaleX="1.3"
+                    android:src="@drawable/promo" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/See"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="220dp"
+                android:background="@drawable/activity_menu_bg">
+
+                <TextView
+                    android:id="@+id/textsee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".09"
+                    android:text="See today's deals"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/textsee"
+                    android:layout_centerHorizontal="true"
+                    android:scaleX="1.3"
+                    android:src="@drawable/dealspic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/See"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/activity_menu_bg"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/Spot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".09"
+                    android:text="Best spots to go"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/spot1"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_below="@+id/Spot"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spot_border">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/tangadanfalls"
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        android:scaleX="1.1"
+                        android:src="@drawable/tangadanfalls"
+                        app:shapeAppearance="@style/roundedcorner" />
+
+                    <CheckBox
+                        android:id="@+id/heart1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/heart_selector" />
+
+                    <TextView
+                        android:id="@+id/texttitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tangadanfalls"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:letterSpacing=".09"
+                        android:text="Tangandan Falls"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/lct1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/texttitle1"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/texttitle1"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lct1"
+                        android:text="San Gabriel, La Union"
+                        android:textColor="@color/red"
+                        android:textSize="10dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rate"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/lct1"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rate_border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="8.5"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/lct1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/rate"
+                        android:text="Ratings Excellent"
+                        android:textColor="@color/gray"
+                        android:textSize="12dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spot2"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_below="@+id/Spot"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/spot1"
+                    android:background="@drawable/spot_border">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/urbiztondobeach"
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        android:scaleX="1.1"
+                        android:src="@drawable/urbbeach"
+                        app:shapeAppearance="@style/roundedcorner" />
+
+                    <CheckBox
+                        android:id="@+id/heart2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/heart_selector" />
+
+                    <TextView
+                        android:id="@+id/texttitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/urbiztondobeach"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:letterSpacing=".09"
+                        android:text="Urbiztondo Beach"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/lct2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/texttitle2"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/texttitle2"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lct2"
+                        android:text="San Juan, La Union"
+                        android:textColor="@color/red"
+                        android:textSize="10dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rate1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/lct2"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rate_border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="9.0"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/lct2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/rate1"
+                        android:text="Ratings Excellent"
+                        android:textColor="@color/gray"
+                        android:textSize="12dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spot3"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_below="@+id/spot1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spot_border">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/calle"
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        android:scaleX="1.1"
+                        android:src="@drawable/calle"
+                        app:shapeAppearance="@style/roundedcorner" />
+
+                    <CheckBox
+                        android:id="@+id/heart3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/heart_selector" />
+
+                    <TextView
+                        android:id="@+id/texttitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calle"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:letterSpacing=".09"
+                        android:text="Calle Crisologo"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/lct3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/texttitle3"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/texttitle3"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lct3"
+                        android:text="Vigan, Ilocos Sur"
+                        android:textColor="@color/red"
+                        android:textSize="10dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rate2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/lct3"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rate_border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="9.5"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/lct3"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/rate2"
+                        android:text="Ratings Excellent"
+                        android:textColor="@color/gray"
+                        android:textSize="12dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spot4"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_below="@+id/spot1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/spot3"
+                    android:background="@drawable/spot_border">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/pagudpud"
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        android:scaleX="1.1"
+                        android:src="@drawable/pagudpud"
+                        app:shapeAppearance="@style/roundedcorner" />
+
+                    <CheckBox
+                        android:id="@+id/heart4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/heart_selector" />
+
+                    <TextView
+                        android:id="@+id/texttitle4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pagudpud"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:letterSpacing=".09"
+                        android:text="Pagudpud Beach"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/lct4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/texttitle4"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/texttitle4"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lct4"
+                        android:text="Pagudpud, Ilocos Norte"
+                        android:textColor="@color/red"
+                        android:textSize="10dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rate3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/lct4"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rate_border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="9.5"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/lct4"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/rate3"
+                        android:text="Ratings Excellent"
+                        android:textColor="@color/gray"
+                        android:textSize="12dp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation"/>
+
+</RelativeLayout>

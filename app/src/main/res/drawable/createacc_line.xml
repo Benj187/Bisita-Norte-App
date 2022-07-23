@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  >
+        <shape android:shape="line" android:tintMode="src_in">
+            <stroke android:color="@color/pink2" android:width="3dp"/>
+            <padding android:bottom="60dp"/>
+        </shape>
+    </item>
+</selector>

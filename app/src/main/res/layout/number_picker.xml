@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.1"
+        android:text="Room"
+        android:textColor="@color/black"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/roomNo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/room"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/Adult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roomNo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.1"
+        android:text="Adult"
+        android:textColor="@color/black"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/AdultNo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Adult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/Children"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Children"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:letterSpacing="0.1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/AdultNo"/>
+
+    <EditText
+        android:id="@+id/ChildNo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Children"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+</RelativeLayout>

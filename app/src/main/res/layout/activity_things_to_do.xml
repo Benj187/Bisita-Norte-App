@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThingsToDo"
+    android:background="@color/pink2">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_arrow_back"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/backButton"
+        android:text="Things to Do"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/imgsurf"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_below="@id/backButton"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_surf" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/most"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgsurf"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Popular Activities"
+        android:textColor="@color/white"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/most"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="350dp"
+        android:layout_height="270dp"
+        android:layout_below="@+id/line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/car1"
+                android:layout_width="240dp"
+                android:layout_height="270dp"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleX="1.7"
+                    android:src="@drawable/img_actvy_bananaboat" />
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="Hundred Island: Banana Boat
+@ Quezon Island"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/person1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_many_person" />
+
+                <TextView
+                    android:id="@+id/fbname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/person1"
+                    android:text="6 - 10 person available"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/duration1"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/person1"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_duration_todo" />
+
+                <TextView
+                    android:id="@+id/durationInfo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/person1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/duration1"
+                    android:text="Duration: 15min."
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/rate1"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/duration1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleX="1.4"
+                    android:src="@drawable/ic_rate_star" />
+
+                <TextView
+                    android:id="@+id/rateNo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/durationInfo1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/rate1"
+                    android:text="(4.9)"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rate1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="PHP. 250.00 - per person"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/car2"
+                android:layout_width="240dp"
+                android:layout_height="270dp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/car1"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleX="1.7"
+                    android:src="@drawable/img_scubadiving" />
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="Pagudpud, Ilocos Norte: Scuba
+Diving"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/person2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_many_person" />
+
+                <TextView
+                    android:id="@+id/personlimit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/person2"
+                    android:text="1 - 6 person available"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/duration2"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/person2"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_duration_todo" />
+
+                <TextView
+                    android:id="@+id/durationInfo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/person2"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/duration2"
+                    android:text="Duration: 10min. - 30min."
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/rate2"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/duration2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleX="1.4"
+                    android:src="@drawable/ic_rate_star" />
+
+                <TextView
+                    android:id="@+id/rateNo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/durationInfo2"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/rate2"
+                    android:text="(4.9)"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/price2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rate2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="PHP. 3,500.00"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/car3"
+                android:layout_width="240dp"
+                android:layout_height="270dp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/car2"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleX="1.7"
+                    android:src="@drawable/img_boatpadding" />
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="Hundred Island: Boat Paddling
+@ Children's Island"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/person3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/title3"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_many_person" />
+
+                <TextView
+                    android:id="@+id/personlimit3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title3"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/person3"
+                    android:text="1 - 2 person available"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/duration3"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/person3"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_duration_todo" />
+
+                <TextView
+                    android:id="@+id/durationInfo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/person3"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/duration3"
+                    android:text="Duration: 30min. - 1hr."
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/rate3"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/duration3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleX="1.4"
+                    android:src="@drawable/ic_rate_star" />
+
+                <TextView
+                    android:id="@+id/rateNo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/durationInfo3"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/rate3"
+                    android:text="(4.9)"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/price3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rate3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="PHP. 350.00"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/scroll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

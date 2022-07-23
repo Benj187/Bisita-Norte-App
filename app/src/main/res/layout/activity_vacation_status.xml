@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VacationStatus"
+    android:background="@color/pink2">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_arrow_back"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="1.2"
+            android:scaleY="1.1"
+            android:src="@drawable/img_vacation_status" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/backButton"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/bg_vacation_status">
+
+        <TextView
+            android:id="@+id/ongoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:letterSpacing="0.1"
+            android:text="On Going"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="250dp"
+            android:layout_below="@id/rentStatus"
+            android:layout_marginStart="80dp"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/rentStatus"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/ongoing"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/activity_menu_bg">
+
+            <ImageView
+                android:id="@+id/carStatus"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/img_car_vacationstatus" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/carStatus"
+                android:text="Pick-up"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/status1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/carStatus"
+                android:text="None"
+                android:textColor="@color/pink2"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/CheckInStatus"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/rentStatus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/activity_menu_bg">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/hotelInStatus"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/img_viganplaza_detail"
+                app:shapeAppearance="@style/roundedcorner" />
+
+            <TextView
+                android:id="@+id/CheckIN"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/hotelInStatus"
+                android:text="Hotel Name"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CheckIN"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/hotelInStatus"
+                android:text="Check-In:"
+                android:textColor="@color/pink2"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DateNo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CheckIN"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/Date1"
+                android:text="None"
+                android:textColor="@color/pink2"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/CheckOutStatus"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/CheckInStatus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/activity_menu_bg">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/hotelOutStatus"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/img_viganplaza_detail"
+                app:shapeAppearance="@style/roundedcorner" />
+
+            <TextView
+                android:id="@+id/CheckOUT"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/hotelOutStatus"
+                android:text="Hotel Name"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CheckOUT"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/hotelOutStatus"
+                android:text="Check-Out:"
+                android:textColor="@color/pink2"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DateNo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CheckOUT"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/Date2"
+                android:text="None"
+                android:textColor="@color/pink2"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

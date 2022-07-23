@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Trips"
+    android:background="@color/pink2">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_arrow_back"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/backButton"
+        android:text="Enjoyable trips"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/imgsurf"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_below="@id/backButton"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_travel"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/imgsurf"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/bestExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Best experience to do"
+        android:textColor="@color/white"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/bestExp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/car1"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_kalesa" />
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="130dp"
+                    android:letterSpacing=".05"
+                    android:text="Kalesa Ride "
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/location1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/lct1"
+                    android:text="Vigan, Ilocos Sur"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/car2"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/car1"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_skydiving" />
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="130dp"
+                    android:letterSpacing=".05"
+                    android:text="Sky Diving"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/location2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/lct2"
+                    android:text="Vigan, Ilocos Sur"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/car3"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/car2"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleY="1.1"
+                    android:src="@drawable/img_scubadiving_trips" />
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="130dp"
+                    android:letterSpacing=".05"
+                    android:text="Scuba Diving"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title3"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/location3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title3"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/lct3"
+                    android:text="San Fernando, La Union"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/scroll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/Resort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Reopened Resort"
+        android:textColor="@color/white"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/Resort"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrol1"
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/line3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/Resort1"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleX="1.1"
+                    android:src="@drawable/img_kahunahotel" />
+
+                <TextView
+                    android:id="@+id/title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="130dp"
+                    android:letterSpacing=".05"
+                    android:text="Kahuna Hotel"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title4"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/location4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title4"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/lct4"
+                    android:text="San Juan, La Union"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Resort2"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/Resort1"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleX="1.1"
+                    android:src="@drawable/img_aquaticmarine" />
+
+                <TextView
+                    android:id="@+id/title5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="130dp"
+                    android:letterSpacing=".05"
+                    android:text="Aquatic Marina Water Park"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title5"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/location5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title5"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/lct5"
+                    android:text="Lingayen, Pangasinan"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Resort3"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/Resort2"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleX="1.1"
+                    android:src="@drawable/img_playa" />
+
+                <TextView
+                    android:id="@+id/title6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="130dp"
+                    android:letterSpacing=".05"
+                    android:text="Playa Tropical Resort"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct6"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title6"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/location6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title6"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/lct6"
+                    android:text="Laoag City, Ilocos Norte"
+                    android:textColor="@color/pink2"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="350dp"
+                android:layout_height="3dp"
+                android:layout_below="@id/scrol1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

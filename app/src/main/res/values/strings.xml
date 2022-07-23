@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BisitaNorte</string>
+    <string name="createacc">Click continue if you already fill-up those <br>information above</br></string>
+    <string name="home">Home</string>
+    <string name="save">Save</string>
+    <string name="bookings">Bookings</string>
+    <string name="messages">Messages</string>
+    <string name="more">More</string>
+    <string name="terms_condition_privacy_policy"><![CDATA[Terms & Condition | Privacy Policy]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agree_info"><![CDATA[By tapping the button above, you have agreed to Bisita Norte Terms & Condition and Privacy Policy.]]></string>
+    <string name="account_securtiy_settings"><![CDATA[ACCOUNT & SECURTIY]]></string>
+    <string name="password_security"><![CDATA[Password & Security]]></string>
+    <string name="terms_condition"><![CDATA[Terms & Condition]]></string>
+    <string name="privacy_policy"><![CDATA[Privacy & Policy]]></string>
+    <string name="text_tangandan">It provides a relaxing view and a thrilling cliff diving experience for the tourist and adventure seeker. Tangadan Falls has a height of 15 meters or 50 feet</string>
+</resources>

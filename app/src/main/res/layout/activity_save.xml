@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Save"
+    android:background="@color/pink2"
+    android:id="@+id/Save">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="230dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/logo2"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_list">
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="10dp"
+            android:letterSpacing="0.1"
+            android:text="Save Spots"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/save">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="375dp"
+                    android:layout_height="90dp" />
+
+                <RelativeLayout
+                    android:id="@+id/linear2"
+                    android:layout_width="375dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/linear1" />
+
+                <RelativeLayout
+                    android:id="@+id/linear3"
+                    android:layout_width="375dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/linear2" />
+
+                <RelativeLayout
+                    android:id="@+id/linear4"
+                    android:layout_width="375dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/linear3" />
+
+                <RelativeLayout
+                    android:id="@+id/linear5"
+                    android:layout_width="375dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/linear4" />
+
+                <RelativeLayout
+                    android:id="@+id/linear6"
+                    android:layout_width="375dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/linear5" />
+
+                <RelativeLayout
+                    android:id="@+id/linear7"
+                    android:layout_width="375dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/linear6" />
+
+                <RelativeLayout
+                    android:id="@+id/linear8"
+                    android:layout_width="375dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/linear7" />
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+</RelativeLayout>

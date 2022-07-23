@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/car"
+        android:layout_width="240dp"
+        android:layout_height="225dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/gray2">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleX="1.3"
+            android:src="@drawable/img_kotseboy" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:letterSpacing=".05"
+            android:text="KotseBoy Car Rental"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/fbLogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/title"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/logo_fb" />
+
+        <TextView
+            android:id="@+id/fbname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/fbLogo"
+            android:text="KotseBoy Car Rental Service"
+            android:textColor="#17ABFD"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/phoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fbname"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/fbLogo"
+            android:text="+63 917 626 0628"
+            android:textColor="#17ABFD"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/rentNow"
+            android:layout_width="90dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Rent Now"
+            android:textAlignment="center"
+            android:background="@drawable/btn_rentnow"
+            android:textColor="@color/pink2" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

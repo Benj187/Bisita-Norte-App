@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundedcorner">
+        <item name="cornerSize">20%</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="background">@drawable/costum_input</item>
+    </style>
+</resources>

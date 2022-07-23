@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewCard"
+    android:background="@color/pink2">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/backButton"
+        android:text="Add new card"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="640dp"
+        android:layout_below="@+id/backButton"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border_list">
+
+        <ImageView
+            android:id="@+id/mstcard"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/img_mstcard" />
+
+        <ImageView
+            android:id="@+id/Visa"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/mstcard"
+            android:scaleX="1.5"
+            android:scaleY="1.3"
+            android:src="@drawable/img_visa" />
+
+        <ImageView
+            android:id="@+id/bpi"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/Visa"
+
+            android:src="@drawable/img_bpi" />
+
+        <RelativeLayout
+            android:id="@+id/fill"
+            android:layout_width="340dp"
+            android:layout_height="210dp"
+            android:layout_below="@+id/mstcard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/activity_menu_bg">
+
+            <EditText
+                android:id="@+id/Creditcard"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/gray"
+                android:hint="Credit/Debit Card Number"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Valid"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/Creditcard"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/gray"
+                android:hint="Valid Until (MM/YY)"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/CW"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/Valid"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/gray"
+                android:hint="CVV"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/fill"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/agree"
+            android:background="@android:color/transparent"
+            android:button="@drawable/selector_checkbox_addcard" />
+
+        <TextView
+            android:id="@+id/agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fill"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:letterSpacing=".05"
+            android:text="AGREE"
+            android:textColor="#014397"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/agree_info"
+            android:layout_width="320dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/agree"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/agree_info"
+            android:textAlignment="center"
+            android:textColor="@color/gray1"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/AddCard"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/agree_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_addcard"
+            android:letterSpacing="0.1"
+            android:text="Add Credit/Debit Card"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

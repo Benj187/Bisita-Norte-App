@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment"
+    android:background="@color/pink2">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/hotel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Hotels"
+        android:layout_toRightOf="@id/backButton"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/sethotel"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_below="@id/backButton"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/hotel_place"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/gray2"
+            android:hint="Search..."
+            android:paddingLeft="60dp"
+            app:startIconDrawable="@drawable/ic_search_hotel" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_search_hotel" />
+
+        <RelativeLayout
+            android:id="@+id/checkIn"
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/hotel_place"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/gray2">
+
+            <ImageView
+                android:id="@+id/calendar_in"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_calendar" />
+
+            <TextView
+                android:id="@+id/checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/calendar_in"
+                android:text="Check In"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monthin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkin"
+                android:layout_toRightOf="@id/calendar_in"
+                android:text="Date"
+                android:textColor="@color/pink2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/checkOut"
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/hotel_place"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/checkIn"
+            android:background="@color/gray2">
+
+            <ImageView
+                android:id="@+id/calendar_out"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_calendar" />
+
+            <TextView
+                android:id="@+id/checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/calendar_out"
+                android:text="Check Out"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monthout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkout"
+                android:layout_toRightOf="@id/calendar_out"
+                android:text="Date"
+                android:textColor="@color/pink2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/person"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/checkIn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/gray2">
+
+            <ImageView
+                android:id="@+id/imgPerson"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_person_hotels" />
+
+            <TextView
+                android:id="@+id/roomNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/imgPerson"
+                android:text="0"
+                android:textColor="@color/pink2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/roomNo"
+                android:text="Room"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/adultNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/room"
+                android:text="0"
+                android:textColor="@color/pink2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/adult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/adultNo"
+                android:text="Adult"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/childNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@id/adult"
+                android:text="0"
+                android:textColor="@color/pink2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/child"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/childNo"
+                android:text="Children"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/createButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/person"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/create_btn"
+            android:letterSpacing="0.1"
+            android:text="BOOK NOW"
+            android:textColor="@color/pink2" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/most"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sethotel"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:text="Most Searched Accommodations"
+        android:textColor="@color/white"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/most"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/hotel1"
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:background="@color/gray2">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@drawable/img_viganplaza" />
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="VIGAN PLAZA HOTEL"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct1"
+                    android:text="Vigan, Ilocos Sur"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hotel2"
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:background="@color/gray2"
+                android:layout_toRightOf="@+id/hotel1"
+                android:layout_marginStart="20dp">
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@drawable/img_overmar" />
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="OVERMAR RESORT HOTEL"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct2"
+                    android:text="Vigan, Ilocos Sur"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hotel3"
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:background="@color/gray2"
+                android:layout_toRightOf="@+id/hotel2"
+                android:layout_marginStart="20dp">
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@drawable/img_rustic_crown" />
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing=".05"
+                    android:text="RUSTIC CROWN HOTEL"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lct3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/title3"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title3"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lct3"
+                    android:text="Alaminos, Pangasinan"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/scroll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CE000000" />
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="450dp"
+        android:layout_centerInParent="true"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/x_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:src="@drawable/ic_exit" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/x_btn"
+            android:layout_centerHorizontal="true"
+            android:text="Enter your payment details"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="300dp"
+            android:layout_height="3dp"
+            android:layout_below="@id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink2" />
+
+        <EditText
+            android:id="@+id/Fname"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/gray"
+            android:hint="First name"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Lname"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/Fname"
+            android:backgroundTint="@color/gray"
+            android:hint="Last name"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Creditcard"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/Fname"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/gray"
+            android:hint="Credit/Debit Card Number"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/CW"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/Creditcard"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/gray"
+            android:hint="CVV"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/SubPayment"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/CW"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_addcard"
+            android:letterSpacing="0.1"
+            android:text="Submit Payment"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/supp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SubPayment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="We Support:"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/mstcard"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/supp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/Visa"
+            android:src="@drawable/img_mstcard" />
+
+        <ImageView
+            android:id="@+id/Visa"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/supp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.5"
+            android:scaleY="1.3"
+            android:src="@drawable/img_visa" />
+
+        <ImageView
+            android:id="@+id/bpi"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/supp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/Visa"
+            android:src="@drawable/img_bpi" />
+    </RelativeLayout>
+
+</RelativeLayout>

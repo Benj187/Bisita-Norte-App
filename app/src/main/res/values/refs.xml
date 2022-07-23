@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="spots"> @drawable/spots </drawable>
+    <drawable name="todo"> @drawable/todo </drawable>
+    <drawable name="trips"> @drawable/trips </drawable>
+    <drawable name="img_cardinfo">@drawable/img_cardinfo</drawable>
+</resources>
